@@ -6,7 +6,7 @@ var // Expectation library:
 	chai = require( 'chai' ),
 
 	// Module to be tested:
-	sel = require( './../lib' );
+	quick = require( './../lib' );
 
 
 // VARIABLES //
@@ -17,10 +17,10 @@ var expect = chai.expect,
 
 // TESTS //
 
-describe( 'sort-selection-asc', function tests() {
+describe( 'sort-quicksort-asc', function tests() {
 
 	it( 'should export a function', function test() {
-		expect( sel ).to.be.a( 'function' );
+		expect( quick ).to.be.a( 'function' );
 	});
 
 	it( 'should throw an error if provided a non-array', function test() {
@@ -41,22 +41,22 @@ describe( 'sort-selection-asc', function tests() {
 
 		function badValue( value ) {
 			return function() {
-				sel( value );
+				quick( value );
 			};
 		}
 	});
 
-	it( 'should sort the array into ascending order', function test() {
-		var data, expected;
+	it( 'should create an array sorted into ascending order', function test() {
+		var data, expected, sorted;
 
 		data = [ 14, -7, 4, 76, 30 ];
 		expected = [ -7, 4, 14, 30, 76 ];
 
-		// Apply selection sort, modifying data
-		sel( data );
+		// Apply quicksort, creating new, sorted array
+		sorted = quick( data );
 
 		for ( var i = 0; i < data.length; i++ ){
-			assert.strictEqual( data[i], expected[i] );
+			assert.strictEqual( sorted[i], expected[i] );
 		}
 
 	});
