@@ -1,5 +1,6 @@
 sort-quicksort-asc
 ==================
+[![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
 ## quicksort( arr )
 
@@ -45,3 +46,9 @@ Not in place - original unsorted array is unmodified.
 ## Copyright
 
 Copyright &copy; 2014. Rebekah Smith.
+
+[travis-image]: http://img.shields.io/travis/RebekahJ/sort-quicksort-asc/master.svg
+[travis-url]: https://travis-ci.org/RebekahJ/sort-quicksort-asc
+
+[coveralls-image]: https://img.shields.io/coveralls/RebekahJ/sort-quicksort-asc/master.svg
+[coveralls-url]: https://coveralls.io/r/RebekahJ/sort-quicksort-asc?branch=master
