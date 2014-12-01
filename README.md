@@ -40,7 +40,43 @@ Not in place - original unsorted array is unmodified.
 
 ### Performance
 
+For an unsorted array of size n, the time to sort the array using bubble sort is:
+
+| *n*	        | *Time (ms)*   |
+| --------------| :------------:|
+| 5             |               |
+| 50            |               |
+| 500           |               |
+| 5000          |               |
+| 50000         |               |
+
 ## Tests
+
+### Unit
+
+Unit tests use the [Mocha](http://mochajs.org/) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+
+``` bash
+$ make test
+```
+
+All new feature development should have corresponding unit tests to validate correct functionality.
+
+
+### Test Coverage
+
+This repository uses [Istanbul](https://github.com/gotwarlost/istanbul) as its code coverage tool. To generate a test coverage report, execute the following command in the top-level application directory:
+
+``` bash
+$ make test-cov
+```
+
+Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
+
+``` bash
+$ make view-cov
+```
+
 
 ---
 ## Copyright
